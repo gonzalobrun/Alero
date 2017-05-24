@@ -1,1 +1,44 @@
-/* Empty. Add your own CSS if you like */
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+.home-active {
+  display: none; }
+
+.home-page .background-img {
+  background-image: url(../img/home_image1.gif);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8; }
+.home-page .title-content {
+  position: relative;
+  top: 25%;
+  left: 50px; }
+  .home-page .title-content .title {
+    font-weight: 100;
+    font-size: 180px;
+    color: #b1b1b1;
+    opacity: 0.75; }
+
+.login .form-conteiner {
+  width: 50%;
+  left: 25%;
+  position: relative; }
+.login .title {
+  line-height: normal;
+  font-size: 28px; }
+
+.register .form-conteiner {
+  width: 50%;
+  left: 25%;
+  position: relative; }
+.register .title {
+  line-height: normal;
+  font-size: 28px; }
+
+body {
+  font-family: 'Raleway', sans-serif; }
+
+.view-container {
+  height: calc(100% - 44px);
+  margin-top: 44px; }
+
+/*# sourceMappingURL=style.css.map */
