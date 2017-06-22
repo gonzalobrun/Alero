@@ -1,0 +1,62 @@
+.create-projects{	
+
+	overflow: auto;
+
+	.title{
+		line-height: normal;
+		font-size: 28px;
+	}
+
+	.align-right{
+		text-align: right;
+	}
+
+	.add-icon{
+		font-size: 35px;
+    	line-height: normal;
+
+    	&:hover{
+    		color:#387ef5;
+    	}
+	}
+
+	.thumbsup-icon{
+		font-size: 35px;
+    	line-height: normal;
+
+    	&:hover{
+    		color:#387ef5;
+    	}
+	}
+
+	.task{
+		display: block;
+		width: 100%;
+		position: relative;
+		margin: 2px 0 0 16px;
+		padding: 5px;
+		border: solid 1px #d8d8d8;
+		border-radius: 5px;
+
+		&:hover {
+			color:#387ef5;
+			border-color: #387ef5;
+		}
+	}
+
+	.icon-delete {
+		font-size: 30px;
+		position: absolute;
+		right: 10px;
+		top: 0px;
+
+		&:hover {
+			color: red;
+		}
+	}
+
+	.icon-save{
+		color: green;
+		font-size: 35px;
+	}
+}

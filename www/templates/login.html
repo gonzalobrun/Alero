@@ -10,18 +10,20 @@
       <div class="item item-body">
         <label class="item item-input">
           <span class="input-label">Username</span>
-          <input type="text" ng-model="loginData.username">
+          <input type="text" ng-model="userName">
         </label>
         <label class="item item-input">
           <span class="input-label">Password</span>
-          <input type="password" ng-model="loginData.password">
+          <input type="password" ng-model="password">
         </label>
         <label class="item">
-          <button class="button button-block button-positive" type="submit">Log in</button>
+          <span class="input-label input-required" ng-hide="validFields">No field can be empty</span>
+          <button class="button button-block button-positive" type="submit" ng-click="login()">Log in</button>
+        </label>
+        <label class="item">
           <button class="button button-block button-outline button-positive" ng-click="goToRegister()">Register</button>
         </label>
       </div>
-
     </div>
   </div>
 </div>

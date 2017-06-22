@@ -61,6 +61,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.router'])
     controller: 'ProjectMetricsController'
   })
 
+  .state('createProject', {
+    url: '/createProject',    
+    templateUrl: 'templates/createProject.html',
+    controller: 'CreateProjectController'
+  })
+
   .state('client', {
     url: '/clientView',  
     templateUrl: 'templates/clientView.html',

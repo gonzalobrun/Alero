@@ -1,12 +1,16 @@
 //COMPONENTS
 @import 'components/headerDirective';
+@import 'components/select';
 
 //PARTIALS
 @import 'partials/home';
 @import 'partials/login';
 @import 'partials/register';
+@import 'partials/projects';
+@import 'partials/createProject';
 
 //VENDOR
+@import 'vendor/font-awesome-4.7.0/scss/font-awesome.scss';
 
 //FONTS
 @import url('https://fonts.googleapis.com/css?family=Raleway');

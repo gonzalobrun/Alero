@@ -1,0 +1,79 @@
+<div class="projects">
+  <div>
+    <div class="list card">
+
+      <div class="item">
+        <div class="row responsive-lg">
+
+          <div class="col col-50">
+            <h2 class="title">Projects</h2>
+          </div>
+          
+          <div class="col">
+            <div class="list">
+              <label class="item item-input item-select">
+                <div class="input-label">
+                  Filter
+                </div>
+                <select>
+                  <option selected>My Projects</option>
+                  <option>My Team Projects</option>
+                  <option>Team Member1 Projects</option>
+                  <option>Team Member2 Projects</option>
+                  <option>Team Member3 Projects</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="list">
+              <label class="item item-input item-select">
+                <div class="input-label">
+                  Sort By
+                </div>
+                <select>
+                  <option selected>Creation Date</option>
+                  <option>Status</option>
+                </select>
+              </label>
+            </div>            
+          </div>
+
+          <div class="col col-10 align-right">
+            <i class="icon ion-plus-circled add-project-icon pull-right" ng-click="goToCreateProject()"></i>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="item item-body">        
+        <div class="row" ng-repeat="project in projects" ng-click="goToDetails($index)">
+          <div class="col-10">
+            <i class="icon status-project-icon" ng-class="project.estado == 'approved' ? 'ion-ios-checkmark completed' : project.estado == 'draft' ? 'ion-ios-clock draft' : 'ion-ios-analytics approved'"></i>
+          </div>
+          <div class="col">
+            <h2 class="project-name">{{ project.nombre }}</h2>
+          </div>
+          <div class="col">
+            <label class="label-information">Start Date: </label>
+            <span class="information">{{ project.fechaInicio | date }}</span><br>
+            <label class="label-information">End Date: </label>
+            <span class="information">{{project.fechaFin | date}}</span><br>
+          </div>
+          <div class="col">
+            <label class="label-information">Creation Date: </label>          
+            <span class="information">{{project.fechaCreacion |date }}</span><br>
+            <label class="label-information">Modification Date: </label>
+            <span class="information">{{ project.fechaModificacion | date }}</span><br>
+          </div>
+          <div class="col-10 align-right">
+            <i class="icon ion-ios-arrow-forward arrow-forward"></i>
+          </div>
+        </div> 
+   
+      </div>
+
+    </div>
+  </div>
+</div>

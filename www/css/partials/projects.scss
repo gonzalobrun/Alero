@@ -1,0 +1,80 @@
+.projects{
+
+	.item-body{
+		.row{
+			&:hover {
+				background-color: #fafafa;
+				.align-right {
+					.arrow-forward {
+						color: #387ef5;
+					}
+				}
+			}
+		}
+		
+	}
+
+	.title{
+		line-height: normal;
+		font-size: 28px;
+	}
+
+	.align-right{
+		text-align: right;
+	}
+
+	.add-project-icon{
+		font-size: 35px;
+    	line-height: normal;
+
+    	&:hover{
+    		color:#387ef5;
+    	}
+	}
+
+	.project-name{
+	    font-size: 24px;
+	    position: relative;
+	    top: 0px;
+	}
+
+	.status-project-icon{
+		font-size: 40px;
+	    line-height: normal;
+	    position: relative;
+	    top: 15px;
+	    left: 10px;    
+	    
+
+	    &.completed {
+			color: #20c520;
+	    }
+
+	    &.draft {
+			color: #aaaaaa;
+	    }
+
+	    &.approved {
+			color: #ffc900;
+	    }
+	}
+
+	.arrow-forward{
+		font-size: 30px;
+	    line-height: normal;
+	    position: relative;
+	    top: 15px;
+	    right: 10px;
+	}
+
+	.label-information{
+		display: inline-block;
+	}
+
+	.information{
+		display: inline-block;
+		margin: 5px;
+	
+	}
+
+}

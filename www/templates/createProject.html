@@ -1,0 +1,218 @@
+
+  <div class="create-projects">
+    <div>
+      <div class="list card">
+
+        <div class="item">
+          <div class="row responsive-lg">
+
+            <div class="col col-90">
+              <h2 class="title">Create Project</h2>
+            </div>
+            <div class="col col-10 align-right">
+              <i class="ion-thumbsup thumbsup-icon" ng-click="saveProject()"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="item item-body">
+          <div class="row">
+            <h2>Principal Caracteristics</h2>
+          </div> 
+
+          <div class="row responsive-lg stroke">
+
+            <div class="col col-33">
+              <label class="item item-input">
+                <span class="input-label">Project Name:</span>
+                <input type="text" ng-model="newProject.name">
+              </label>
+            </div>
+
+            <div class="col col-33">            
+              <label class="item item-input item-select">
+                <div class="input-label">
+                  Client Picker:
+                </div>
+                <select ng-model="newProject.clientId">
+                  <option>Client 1</option>
+                  <option>Client 2</option>
+                  <option>Client 3</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="col col-33 align-right">
+              <i class="icon ion-plus-circled add-icon pull-right"></i>
+            </div>
+          </div>
+
+          <div class="row">
+            <h2>Project Details</h2>
+          </div>
+
+          <div class="row responsive-lg">
+            <div class="col col-33">
+              <label class="item item-input">
+                <span class="input-label">Start Date:</span>
+                <input type="date" ng-model="newProject.startDate">
+              </label>
+            </div>
+
+            <div class="col col-33">
+              <label class="item item-input">
+                <span class="input-label">End Date:</span>
+                <input type="date" ng-model="newProject.endDate">
+              </label>
+            </div>
+
+            <div class="col col-33">
+              <label class="item item-input item-select">
+                <div class="input-label">
+                  Type of Project
+                </div>
+                <select ng-model="newProject.type">
+                  <option>Type 1</option>
+                  <option>Type 2</option>
+                  <option>Type 3</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="row stroke responsive-lg">
+            <div class="col col-33">
+              <label class="item item-input">
+                <span class="input-label">Duration (In days):</span>
+                <input type="number" ng-model="newProject.duration">
+              </label>
+            </div>
+            <div class="col col-33">
+              <label class="item item-input">
+                <span class="input-label">Total area:</span>
+                <input type="number" ng-model="newProject.totalArea">
+              </label>
+            </div>
+            <div class="col col-33">
+              <label class="item item-input">
+                <span class="input-label">Covered area:</span>
+                <input type="number" ng-model="newProject.coveredArea">
+              </label>
+            </div>
+          </div>
+
+          <div class="row responsive-lg">
+            <div class="col col-50">
+              <h2>Tasks:</h2>
+            </div>
+
+            <div class="col col-50">
+              <h2>Tasks List:</h2>
+            </div>          
+          </div>
+
+          <div class="row stroke responsive-lg">
+            <div class="col col-20">
+              <label class="item item-input">
+                <span class="input-label">Name:</span>
+                <input type="text" ng-model="newTask.name">
+              </label>
+            </div>
+            <div class="col col-20">
+              <label class="item item-input">
+                <span class="input-label">Weight: </span>
+                <input type="number" max="5" min="1" onkeydown="return false" ng-model="newTask.weight">
+              </label>
+            </div>
+            <div class="col col-10">
+              <i class="icon ion-plus-circled add-icon pull-right" ng-click="addTask()"></i>
+            </div>
+
+            <div class="col col-50">
+              <div ng-repeat="task in newProject.tasks" class="task">
+                <span>{{ task.name }} ({{task.weight}})</span>
+                <i class="ion-ios-close-empty icon-delete" ng-click="deleteTask($index)"></i>
+              </div>                            
+            </div>          
+          </div>
+
+          <div class="row">
+            <h2>Project Adress</h2>
+          </div>
+
+          <div class="row responsive-lg">
+            <div class="col col-33">
+              <label class="item item-input">
+                <span class="input-label">Province:</span>
+                <input type="text" ng-model="newProject.projectAdress.province">
+              </label>
+            </div>
+            <div class="col col-33">
+              <label class="item item-input">
+                <span class="input-label">City:</span>
+                <input type="text" ng-model="newProject.projectAdress.city">
+              </label>
+            </div>
+            <div class="col col-33">
+              <label class="item item-input">
+                <span class="input-label">Neighborhood:</span>
+                <input type="text" ng-model="newProject.projectAdress.neighborhood">
+              </label>
+            </div>
+          </div>
+
+          <div class="row stroke responsive-lg">
+            <div class="col col-33">
+              <label class="item item-input">
+                <span class="input-label">Street:</span>
+                <input type="text" ng-model="newProject.projectAdress.street">
+              </label>
+            </div>
+            <div class="col col-33">
+              <label class="item item-input">
+                <span class="input-label">Number:</span>
+                <input type="text" ng-model="newProject.projectAdress.number">
+              </label>
+            </div>
+            <div class="col col-33">
+              <label class="item item-input">
+                <span class="input-label">Zip Code:</span>
+                <input type="text" ng-model="newProject.projectAdress.zipCode">
+              </label>
+            </div>
+          </div>
+
+          <div class="row">
+            <h2>Payment</h2>
+          </div>
+
+          <div class="row">
+            <div class="col col-33">
+              <label class="item item-input">
+                <span class="input-label">Price:</span>
+                <input type="number" ng-model="newProject.price">
+              </label>
+            </div>
+            <div class="col col-33">
+              <label class="item item-input item-select">
+                <div class="input-label">
+                  Payment:
+                </div>
+                <select ng-model="newProject.payment">
+                  <option>Cash</option>
+                  <option>Fees</option>
+                </select>
+              </label>
+            </div>
+            <div class="col col-33" ng-show="newProject.payment === 'Fees'">
+              <label class="item item-input">
+                <span class="input-label">Fees: </span>
+                <input type="number" max="3" min="1" onkeydown="return false" ng-model="newProject.fees">
+              </label>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>

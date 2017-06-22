@@ -6,3 +6,12 @@ body {
     height: calc(100% - 44px);
     margin-top: 44px;
 }
+
+.stroke {
+    border-bottom: solid #eaeaea 1px;
+}
+
+.input-required {
+    color: red;
+    font-size: 14px;
+}
